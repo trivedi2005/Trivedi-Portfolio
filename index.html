@@ -7,6 +7,14 @@
     <style>
         @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         
+        /* Name Color Pop Animation */
+        @keyframes colorChange {
+            0% { color: #38bdf8; }
+            33% { color: #f472b6; }
+            66% { color: #fbbf24; }
+            100% { color: #38bdf8; }
+        }
+        
         body { 
             background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81); 
             color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; 
@@ -20,11 +28,11 @@
         .header { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; margin-bottom: 40px; }
         .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid #38bdf8; object-fit: cover; }
         
-        h1 { color: #38bdf8; margin: 0; }
+        /* Applied Color Pop Animation to Name */
+        h1 { animation: colorChange 4s infinite; margin: 0; font-size: 2.5rem; }
         h2 { color: #34d399; margin-top: 30px; border-bottom: 2px solid #34d399; display: inline-block; }
         
-        .skills-grid { display: none; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
-        #all-skills:checked ~ .skills-grid { display: grid; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
         .skill-box { background: #1e293b; padding: 15px; border-radius: 8px; border-top: 3px solid #f472b6; text-align: center; }
         
         .project-card { background: #1e293b; padding: 25px; border-radius: 10px; margin-top: 20px; border-left: 5px solid #34d399; transition: 0.3s; }
@@ -49,8 +57,6 @@
     </div>
 
     <h2>Technical Core Competencies</h2>
-    <input type="checkbox" id="all-skills">
-    <label for="all-skills" class="btn">Click to Show All Competencies</label>
     <div class="skills-grid">
         <div class="skill-box"><strong>Languages</strong><br>Java, SQL, Python</div>
         <div class="skill-box"><strong>Core Skills</strong><br>OOPs, DSA, Machine Learning</div>
@@ -58,28 +64,19 @@
     </div>
 
     <h2>Featured Projects</h2>
-    
     <div class="project-card">
         <h3>EV Prediction via Digital Twin</h3>
         <p><strong>Overview:</strong> Developed a real-time telemetry pipeline to monitor electric vehicle battery health.</p>
-        <p><strong>Impact:</strong> Utilized Machine Learning and Explainable AI (XAI) models to predict degradation cycles with 92% accuracy, aiding in proactive maintenance scheduling.</p>
     </div>
-
     <div class="project-card">
         <h3>Flow Track – Operations Management</h3>
-        <p><strong>Overview:</strong> Built a robust full-stack Java web application designed to streamline internal operations and workflow tracking.</p>
-        <p><strong>Tech Stack:</strong> Engineered using Java Servlets, JSP, JDBC, and MySQL. Implemented a strict MVC (Model-View-Controller) architecture to ensure code modularity and maintainability.</p>
+        <p><strong>Overview:</strong> Built a full-stack Java web application designed to streamline internal operations using Servlets, JSP, and MySQL.</p>
     </div>
 
-    <div class="project-card">
-        <h3>Data Analytics Dashboard</h3>
-        <p><strong>Overview:</strong> Created an interactive data dashboard to process and visualize large-scale datasets.</p>
-        <p><strong>Key Features:</strong> Automated data cleaning, performed complex SQL queries for trend analysis, and generated visual reports to support decision-making processes.</p>
-    </div>
-
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="https://drive.google.com/file/d/1Rsljr55NC5aXiAPDdLF-U1hPuimvmaBx/view?usp=sharing" class="btn">View Resume</a>
-        <a href="mailto:trivedireddy312@gmail.com" class="btn">Email Me</a>
+    <h2>Connect With Me</h2>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="tel:+918125369337" class="btn">Call Me</a>
+        <a href="https://drive.google.com/file/d/1Rsljr55NC5aXiAPDdLF-U1hPuimvmaBx/view?usp=sharing" class="btn">Resume</a>
         <a href="https://linkedin.com/in/trivedi-reddy-battula" class="btn">LinkedIn</a>
         <a href="https://github.com/trivedi2005" class="btn">GitHub</a>
     </div>
