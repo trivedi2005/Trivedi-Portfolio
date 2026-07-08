@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battula Ramana Trivedi | Portfolio</title>
     <style>
-        /* Styling to ensure your portfolio looks professional and responsive */
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #0f172a; color: #ffffff; margin: 0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; background: rgba(30, 41, 59, 0.9); padding: 40px; border-radius: 20px; border: 2px solid #38bdf8; }
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* General Styles */
+        body { 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            background-color: #0f172a; 
+            color: #ffffff; 
+            margin: 0; 
+            padding: 20px; 
+            line-height: 1.6; 
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            background: rgba(30, 41, 59, 0.9); 
+            padding: 40px; 
+            border-radius: 20px; 
+            border: 2px solid #38bdf8; 
+            animation: fadeIn 0.8s ease-out; 
+        }
         
         .header { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; margin-bottom: 40px; }
         .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid #38bdf8; object-fit: cover; }
@@ -15,13 +37,29 @@
         h1 { color: #38bdf8; margin: 0; font-size: 2.5rem; }
         h2 { color: #38bdf8; margin-top: 30px; border-bottom: 2px solid #38bdf8; display: inline-block; }
         
+        /* Grid and Card Animations */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
-        .skill-box { background: #1e293b; padding: 15px; border-radius: 8px; text-align: center; border-top: 3px solid #38bdf8; }
+        .skill-box { 
+            background: #1e293b; padding: 15px; border-radius: 8px; text-align: center; 
+            border-top: 3px solid #38bdf8; transition: transform 0.3s ease; 
+        }
+        .skill-box:hover { transform: scale(1.05); }
         
-        .project-card { background: #1e293b; padding: 20px; border-radius: 10px; margin-top: 20px; border-left: 5px solid #38bdf8; }
+        .project-card { 
+            background: #1e293b; padding: 20px; border-radius: 10px; margin-top: 20px; 
+            border-left: 5px solid #38bdf8; transition: transform 0.3s ease; 
+        }
+        .project-card:hover { transform: scale(1.02); }
+        
         .contact { text-align: center; margin-top: 40px; }
-        .btn { display: inline-block; padding: 12px 25px; margin: 10px; background: #38bdf8; color: #0f172a; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background: #ffffff; }
+        
+        /* Button Styles */
+        .btn { 
+            display: inline-block; padding: 12px 25px; margin: 10px; 
+            background: #38bdf8; color: #0f172a; text-decoration: none; 
+            border-radius: 8px; font-weight: bold; transition: 0.3s; 
+        }
+        .btn:hover { background: #ffffff; transform: translateY(-3px); }
     </style>
 </head>
 <body>
@@ -55,6 +93,8 @@
 
     <div class="contact">
         <h2>Let's Connect</h2>
+        <br>
+        <a href="https://drive.google.com/file/d/1Rsljr55NC5aXiAPDdLF-U1hPuimvmaBx/view?usp=sharing" class="btn" target="_blank">View Resume</a>
         <a href="mailto:trivedireddy312@gmail.com" class="btn">Email Me</a>
         <a href="https://linkedin.com/in/trivedi-reddy-battula" class="btn">LinkedIn Profile</a>
         <a href="https://github.com/trivedi2005" class="btn">GitHub Portfolio</a>
