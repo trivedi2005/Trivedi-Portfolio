@@ -5,22 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battula Ramana Trivedi | Portfolio</title>
     <style>
+        /* Animations */
         @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         @keyframes colorChange { 0% { color: #38bdf8; } 33% { color: #f472b6; } 66% { color: #fbbf24; } 100% { color: #38bdf8; } }
         
-        body { background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81); color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: rgba(30, 41, 59, 0.8); padding: 40px; border-radius: 20px; border: 1px solid #38bdf8; backdrop-filter: blur(10px); }
+        /* Layout Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81); 
+            color: #ffffff; 
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container Fixed to be Full Width */
+        .container { 
+            width: 100%; 
+            max-width: 900px; 
+            background: rgba(30, 41, 59, 0.8); 
+            padding: 40px; 
+            border-radius: 20px; 
+            border: 1px solid #38bdf8; 
+            backdrop-filter: blur(10px); 
+        }
         
         .header { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; margin-bottom: 40px; }
         .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid #38bdf8; object-fit: cover; }
         
-        .marquee-container { overflow: hidden; white-space: nowrap; margin: 10px 0; }
+        .marquee-container { overflow: hidden; width: 100%; margin: 10px 0; }
         .sliding-text { display: inline-block; animation: marquee 15s linear infinite; font-weight: bold; color: #38bdf8; font-size: 1.3rem; }
         
         h1 { animation: colorChange 4s infinite; font-size: 2.5rem; margin: 0; }
         h2 { color: #34d399; margin-top: 30px; border-bottom: 2px solid #34d399; display: inline-block; }
         
-        /* Universal Pop-up Effect */
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
         .pop-card { background: #1e293b; padding: 20px; border-radius: 10px; border-top: 4px solid #38bdf8; transition: 0.3s; cursor: pointer; }
         .pop-card:hover { transform: translateY(-10px) scale(1.03); background: #2d3748; border-top: 4px solid #f472b6; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
@@ -34,8 +54,7 @@
 
 <div class="container">
     <div class="header">
-        <!-- Replace your old <img src> line with this one -->
-        <img src="profile.jpg" alt="Battula Ramana Trivedi" class="profile-img" style="width: 150px; height: 150px;">
+        <img src="profile.jpg" alt="Battula Ramana Trivedi" class="profile-img">
         <div>
             <h1>Battula Ramana Trivedi</h1>
             <div class="marquee-container">
@@ -75,6 +94,7 @@
             </ul>
         </div>
     </div>
+
     <h2>Academics</h2>
     <div class="grid-container">
         <div class="pop-card"><strong>B.Tech (ECE)</strong><br>8.3/10 GPA</div>
